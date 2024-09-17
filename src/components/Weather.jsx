@@ -1,31 +1,27 @@
 import { useState } from 'react';
 
 const Weather = () => {
-  const [city, setCity] = useState('');         // State für die Stadt, die der Nutzer eingibt
-  const [weather, setWeather] = useState(null); // State für die Wetterdaten
-  const [error, setError] = useState(null);     // State für etwaige Fehler
+  const [city, setCity] = useState('');        
+  const [weather, setWeather] = useState(null); 
+  const [error, setError] = useState(null);    
 
   const apiKey = 'c3db5eb8bc5f28ab53106182b9020d06';
 
-  // Funktion für den API-Aufruf
   const getWeather = async (e) => {
     e.preventDefault();
-    setError(null); // Fehler zurücksetzen
+    setError(null); // 
 
     if (city === '') {
       setError('Bitte eine Stadt eingeben.');
       return;
     }
-
     try {
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
       );
-
       if (!response.ok) {
         throw new Error('Stadt nicht gefunden');
       }
-
       const data = await response.json();
       setWeather(data);
     } catch (err) {
