@@ -1,3 +1,29 @@
+import convertTemperature from './temperature';
+
+const Weather = ({ weather, unit }) => {
+  const temperature = convertTemperature(weather.main.temp, unit);
+
+  return (
+    <div>
+      <h2>Aktuelles Wetter</h2>
+      <p>Temperatur: {temperature}° {unit}</p>
+      <p>Luftfeuchtigkeit: {weather.main.humidity}%</p>
+      <p>Wind: {weather.wind.speed} m/s</p>
+      <p>Beschreibung: {weather.weather[0].description}</p>
+    </div>
+  );
+};
+
+export default Weather;
+
+
+
+
+
+
+
+
+/*
 import { useState } from 'react';
 
 const Weather = () => {
@@ -5,11 +31,11 @@ const Weather = () => {
   const [weather, setWeather] = useState(null); 
   const [error, setError] = useState(null);    
 
-  const apiKey = 'c3db5eb8bc5f28ab53106182b9020d06';
+  const apiKey = 'd2db14b4288cd934dcaf95cf6474178c';
 
   const getWeather = async (e) => {
     e.preventDefault();
-    setError(null); // 
+    setError(null); 
 
     if (city === '') {
       setError('Bitte eine Stadt eingeben.');
@@ -27,9 +53,8 @@ const Weather = () => {
     } catch (err) {
       setError(err.message);
       setWeather(null);
-    }
-  };
-
+    }};
+    
   return (
     <div className="weathercontainer">
       <h1>Wetter App</h1>
@@ -59,3 +84,4 @@ const Weather = () => {
 };
 
 export default Weather;
+*/
