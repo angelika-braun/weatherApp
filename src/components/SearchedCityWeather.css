@@ -1,0 +1,24 @@
+.weather-elements {
+      background-image: linear-gradient(to bottom, #C51077, #7A288A);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      width: 400px;
+      margin: 50px auto 50px auto;
+      color: #fff;
+      height: 100%;
+    }
+    
+    .weather-elements h3 {
+      margin-top: 0;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #4d032d;
+    }
+    
+    .weather-elements p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      padding: 5px;
+    }

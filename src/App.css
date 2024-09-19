@@ -1,6 +1,27 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+*{
+  margin: 0;
+  padding: 0;
   text-align: center;
+  height: 100;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+/* body .dark-mode {
+  background-color: #242424 !important;
+  color: whitesmoke !important;
+  width: auto;
+} */
+
+.darkmodeButton {
+  width: 25%;
+  height: 40px;
+  padding: 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom, #7A288A, #C51077);
+  color: #fff;
+  cursor: pointer;
+}
+.darkmodeButton button:hover {
+  background-image: linear-gradient(to bottom, #C51077, #7A288A);
+  }
